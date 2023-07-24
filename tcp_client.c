@@ -8,7 +8,7 @@
 *
 *
 *******************************************************************************
-* $ Copyright 2021 Cypress Semiconductor $
+* $ Copyright 2021-2023 Cypress Semiconductor $
 *******************************************************************************/
 
 /* Header file includes. */
@@ -34,7 +34,8 @@
 /* TCP client task header file. */
 #include "tcp_client.h"
 
-#include "cy_lwip.h"
+/* IP address related header files (part of the lwIP TCP/IP stack). */
+#include "ip_addr.h"
 
 /* Standard C header files */
 #include <inttypes.h>

@@ -8,14 +8,14 @@
 *
 *
 *******************************************************************************
-* $ Copyright 2021 Cypress Semiconductor $
+* $ Copyright 2021-2023 Cypress Semiconductor $
 *******************************************************************************/
 /* Header file includes */
 #include "cyhal.h"
 #include "cybsp.h"
 #include "cy_retarget_io.h"
 
-/* FreeRTOS header file. */
+/* FreeRTOS header file */
 #include <FreeRTOS.h>
 #include <task.h>
 
@@ -32,7 +32,7 @@
 /*******************************************************************************
 * Global Variables
 ********************************************************************************/
-/* This enables RTOS aware debugging. */
+/* This enables RTOS aware debugging */
 volatile int uxTopUsedPriority;
 
 /*******************************************************************************
@@ -58,7 +58,7 @@ int main(void)
     /* Initialize the board support package. */
     CY_ASSERT(CY_RSLT_SUCCESS == cybsp_init());
     
-    /* Enable global interrupts */
+    /* Enable global interrupts. */
     __enable_irq();
 
     /* Initialize retarget-io to use the debug UART port. */
